@@ -8,3 +8,4 @@ RUN go get github.com/golang/mock/gomock
 RUN git config --global url.ssh://git@gitlab.com/localmeasure.insteadOf https://gitlab.com/localmeasure
 RUN git config --global url.ssh://git@github.com/roamz.insteadOf https://github.com/roamz
 
+ENV GOROOT=/usr/local/go
