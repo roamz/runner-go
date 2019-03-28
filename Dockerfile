@@ -1,9 +1,8 @@
-FROM golang:1-alpine
+FROM golang:1
 
-RUN apk add --no-cache gcc musl-dev openssh-client git python3 zip
-RUN pip3 install pip awscli --upgrade
+RUN apt-get update && apt-get install -y python3-pip zip
+RUN pip3 install awscli --upgrade
 RUN go get -u golang.org/x/lint/golint
 RUN go get github.com/golang/mock/gomock
 RUN git config --global url.ssh://git@gitlab.com/localmeasure.insteadOf https://gitlab.com/localmeasure
 RUN git config --global url.ssh://git@github.com/roamz.insteadOf https://github.com/roamz
-
