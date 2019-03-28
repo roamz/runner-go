@@ -1,6 +1,6 @@
 FROM golang:1-alpine
 
-RUN apk add --no-cache openssh-client git python3 zip
+RUN apk add --no-cache gcc musl-dev openssh-client git python3 zip
 RUN pip3 install pip awscli --upgrade
 RUN go get -u golang.org/x/lint/golint
 RUN go get github.com/golang/mock/gomock
