@@ -1,6 +1,6 @@
 FROM golang:1.12
 
-RUN apt-get update && apt-get install -y python3-pip zip
+RUN apt-get update && apt-get install -y python3-pip zip parallel
 RUN pip3 install awscli --upgrade
 RUN go get github.com/golang/mock/gomock
 RUN curl -sfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh| sh -s -- -b $(go env GOPATH)/bin v1.17.1
