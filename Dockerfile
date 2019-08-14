@@ -1,4 +1,4 @@
-FROM golang:1.12.7
+FROM golang:1.12.8
 
 RUN apt-get update && apt-get install -y zip
 RUN curl -sfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh| sh -s -- -b $(go env GOPATH)/bin v1.17.1
