@@ -1,4 +1,4 @@
-FROM golang:1.13.0-stretch
+FROM golang:1.13.1-stretch
 
 ENV GOPRIVATE=gitlab.com/localmeasure,github.com/roamz,github.com/localmeasure
 RUN apt-get update && apt-get install -y zip
